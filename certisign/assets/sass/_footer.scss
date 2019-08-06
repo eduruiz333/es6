@@ -1,0 +1,29 @@
+/* Footer */
+
+.footer {
+  background-color: $darkBlue;
+
+  .container {
+    .footer-itens {
+      display: flex;
+      align-items: center;
+
+      span,
+      img {
+        display: block;
+      }
+
+      span, a {
+        color: $white;
+      }
+
+      span {
+        margin-left: 1rem;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
