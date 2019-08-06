@@ -1,0 +1,13 @@
+body {
+    background-color:black;
+}
+
+section {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.img {
+    border-radius: 50%;
+}
+
+
