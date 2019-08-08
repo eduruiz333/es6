@@ -38,6 +38,6 @@ interacao.addEventListener('mouseenter', entrou);
 interacao.addEventListener('mouseout', saiu);
 
 // Aqui uma função autoexecutável
-(function () {
+(() => {
     console.log('Função autoexecutável')
 })();
