@@ -1,4 +1,5 @@
 // Recupera parágrafos em ordem como um Array, e altera a cor do segundo
+
 let p1 = document.getElementsByTagName('p')[0];
 let p2 = document.getElementsByTagName('p')[1];
 p2.style.color = 'blue';
@@ -41,3 +42,5 @@ interacao.addEventListener('mouseout', saiu);
 (() => {
     console.log('Função autoexecutável')
 })();
+
+
