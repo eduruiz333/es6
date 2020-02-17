@@ -14,14 +14,17 @@ const alchemy = {
         'O Princípio de Causa e Efeito.',
         'O Princípio de Gênero.'
     ],
-    conclusion: 'Estes Sete Princípios podem ser explicados e explanados, como vamos fazer nesta lição. Uma pequena explanação de cada um deles pode ser feita agora, e é o que vamos fazer.'
+    conclusion: 'Estes Sete Princípios podem ser explicados e explanados, como vamos fazer nesta lição. Uma pequena explanação de cada um deles pode ser feita agora, e é o que vamos fazer.',
+    author: 'Os Três Iniciados'
 }
 
-// console.log(alchemy.precepts)
+function renderAuthor(name) {
+    return (name) ? name : 'desconhecido'
+}
 
 const markup = `
 
-   <article>
+   <article class="p-4">
         <header>
             <h1>${alchemy.title}</h1>
         </header>
@@ -36,6 +39,7 @@ const markup = `
         </section>
         <section class="p-5 mb-3">
             <h6>${alchemy.conclusion}</h6>
+            <p>Autor: ${renderAuthor(alchemy.author)}</p>
         </section>
     </article>
 `
