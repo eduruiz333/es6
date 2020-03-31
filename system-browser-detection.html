@@ -19,6 +19,10 @@
         .img {
             border-radius: 50%;
         }
+        strike {
+            background-color: #c82333;
+            padding: 0 5px;
+        }
     </style>
 </head>
 <body class="bg-dark">
@@ -28,27 +32,59 @@
         <div class="row">
             <div class="col text-center my-5">
                 <h2 class="mb-4">INFORMAÇÕES DO SISTEMA</h2>
-
-                <button class="btn btn-info" onclick="operatingSytem()">
-                    OS
-                </button>
-                <br>
-                <div class="sys-info"></div>
-
-                <br><br>
-
-                <button class="btn btn-info" onclick="version()">
-                    Browser
-                </button>
-                <br>
-                <div class="version"></div>
+                <h3>Olá, seja bem vindo.</h3>
+                <p >
+                    Identificamos que o seu Sistema Operacional é o <strong><span class="sys-info"></span></strong> <strike>x Bits</strike> e o seu navegador é o <strong><span class="browser"></span></strong>.
+                </p>
+                <p class="broDet"><strong>Detalhes do navegador:</strong> <span class="browserDetails small"></span></p>
 
             </div>
         </div>
 
     </div>
 
-    <script src="./assets/scripts/client-info.js"></script>
+    <script>
+        (function operatingSytem() {
+
+            let OSName="Sistema Operacional desconhecido";
+
+            if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+            if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+            if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+            if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+            document.querySelector('.sys-info').innerHTML = OSName;
+
+            if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
+            {
+                alert('Opera');
+            }
+            else if(navigator.userAgent.indexOf("Chrome") != -1 )
+            {
+                document.querySelector('.browser').innerHTML = 'Chrome';
+            }
+            else if(navigator.userAgent.indexOf("Safari") != -1)
+            {
+                document.querySelector('.browser').innerHTML = 'Safari'
+            }
+            else if(navigator.userAgent.indexOf("Firefox") != -1 )
+            {
+                document.querySelector('.browser').innerHTML = 'Firefox'
+            }
+            else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+            {
+                document.querySelector('.browser').innerHTML = 'Internet Explorer'
+            }
+            else
+            {
+                document.querySelector('.browser').innerHTML = 'Navegador desconhecido'
+            }
+
+            let browserDetails = navigator.userAgent;
+            document.querySelector('.browserDetails').innerHTML = browserDetails;
+
+        })();
+    </script>
 
 </body>
 </html>
