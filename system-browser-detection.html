@@ -43,7 +43,16 @@
 
     </div>
 
+    <p>Sua corrida deu o valor de R$:  <span class="result"></span> </p>
+
     <script>
+
+        distanciakm = prompt("Qual a distância percorrida? (km)");
+        tempo = prompt("Quanto tempo levou a corrida?");
+        valorCorrida = 2+distanciakm*1.4+tempo*0.26;
+        document.querySelector('.result').innerHTML = valorCorrida;
+
+
         (function operatingSytem() {
 
             let OSName="Sistema Operacional desconhecido";
@@ -84,6 +93,30 @@
             document.querySelector('.browserDetails').innerHTML = browserDetails;
 
         })();
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
     </script>
 
 </body>
