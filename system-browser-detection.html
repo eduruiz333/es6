@@ -34,90 +34,14 @@
                 <h2 class="mb-4">INFORMAÇÕES DO SISTEMA</h2>
                 <h3>Olá, seja bem vindo.</h3>
                 <p >
-                    Identificamos que o seu Sistema Operacional é o <strong><span class="sys-info"></span></strong> <strike>x Bits</strike> e o seu navegador é o <strong><span class="browser"></span></strong>.
+                    Identificamos que o seu Sistema Operacional é o <strong><span class="sys-info"></span> - <span class="arch"></span> bits</strong> e o seu navegador é o <strong><span class="browser"></span></strong>.
                 </p>
-                <p class="broDet"><strong>Detalhes do navegador:</strong> <span class="browserDetails small"></span></p>
-
             </div>
         </div>
 
     </div>
 
-    <p>Sua corrida deu o valor de R$:  <span class="result"></span> </p>
-
-    <script>
-
-        distanciakm = prompt("Qual a distância percorrida? (km)");
-        tempo = prompt("Quanto tempo levou a corrida?");
-        valorCorrida = 2+distanciakm*1.4+tempo*0.26;
-        document.querySelector('.result').innerHTML = valorCorrida;
-
-
-        (function operatingSytem() {
-
-            let OSName="Sistema Operacional desconhecido";
-
-            if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
-            if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
-            if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-            if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
-
-            document.querySelector('.sys-info').innerHTML = OSName;
-
-            if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
-            {
-                alert('Opera');
-            }
-            else if(navigator.userAgent.indexOf("Chrome") != -1 )
-            {
-                document.querySelector('.browser').innerHTML = 'Chrome';
-            }
-            else if(navigator.userAgent.indexOf("Safari") != -1)
-            {
-                document.querySelector('.browser').innerHTML = 'Safari'
-            }
-            else if(navigator.userAgent.indexOf("Firefox") != -1 )
-            {
-                document.querySelector('.browser').innerHTML = 'Firefox'
-            }
-            else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-            {
-                document.querySelector('.browser').innerHTML = 'Internet Explorer'
-            }
-            else
-            {
-                document.querySelector('.browser').innerHTML = 'Navegador desconhecido'
-            }
-
-            let browserDetails = navigator.userAgent;
-            document.querySelector('.browserDetails').innerHTML = browserDetails;
-
-        })();
-
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        
-    </script>
+    <script src="assets/scripts/client-info.js"></script>
 
 </body>
 </html>
