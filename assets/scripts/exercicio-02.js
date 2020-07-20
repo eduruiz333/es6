@@ -86,3 +86,30 @@ console.log('Resultado: ' + calc(fnMult, 3, 3));
 
     fibonacci.innerHTML = '0' + printaFibonacci
 }) ()
+
+
+// MESMA SEQUÊNCIA USANDO SOMENTE LOG, E RECONHECENDO SE O NÚMERO CONSTA NO ARRAY
+/*
+    (fibonacci = () => {
+        const quantidade = 10
+        let primeiro = 0
+        let segundo = 1
+        let soma = undefined
+        let lista = [0]
+
+        for (let i = 0; i <= quantidade; i ++) {
+            soma = primeiro + segundo
+            primeiro = soma
+            segundo = primeiro - segundo
+            lista.push(soma)
+        }
+        console.log(lista)
+
+        if(lista.indexOf(quantidade) !== -1) {
+            console.log('sim, o numero calculado consta na sequência de Fibonacci')
+        } else {
+            console.log('não, o numero calculado não consta na sequência de Fibonacci')
+        }
+
+    }) ()
+*/
